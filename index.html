@@ -19,6 +19,7 @@
         --gold: #f4c85b;
         --mint: #84e57f;
         --blue: #68a9ff;
+        --red: #ff5a68;
         --shadow: 0 20px 70px rgba(0, 0, 0, 0.42);
       }
       * {
@@ -456,7 +457,7 @@
 
       .clients {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 7px;
       }
       .client {
@@ -485,6 +486,9 @@
       }
       .client:nth-child(3) {
         border-top: 2px solid var(--blue);
+      }
+      .client:nth-child(4) {
+        border-top: 2px solid var(--red);
       }
       .bottom-bar {
         min-width: 0;
@@ -1034,19 +1038,22 @@
               <div class="client">
                 <strong>Bajaj</strong><span>Enterprise frontend</span>
               </div>
+              <div class="client">
+                <strong>Enmes</strong><span>Lab testing website</span>
+              </div>
             </div>
 
             <div class="proof-label project-label">Personal projects</div>
             <div class="mini-projects">
               <a
                 class="mini-project"
-                href="https://deba-maity.github.io/healthplanner"
+                href="https://deba-maity.github.io/personalStackOverflow/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <div>
-                  <strong>Health Planner</strong
-                  ><span>Angular · dashboard · tracking</span>
+                  <strong>Personal StackOverflow</strong
+                  ><span>Custom Stack Overflow for when AI isn't enough</span>
                 </div>
                 <b>↗</b>
               </a>
@@ -1058,7 +1065,7 @@
               >
                 <div>
                   <strong>Angular Features</strong
-                  ><span>Angular 17 · forms · routing</span>
+                  ><span>Angular 17 complete guide</span>
                 </div>
                 <b>↗</b>
               </a>
