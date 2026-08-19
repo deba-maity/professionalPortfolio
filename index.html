@@ -110,7 +110,7 @@
         height: 100dvh;
         padding: 14px;
         display: grid;
-        grid-template-rows: 82px minmax(0, 1fr) 54px;
+        grid-template-rows: 82px minmax(0, 1fr) 44px;
         gap: 10px;
       }
 
@@ -486,6 +486,57 @@
       .client:nth-child(3) {
         border-top: 2px solid var(--blue);
       }
+      .bottom-bar {
+        min-width: 0;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 14px;
+        padding: 6px 12px;
+        font-size: 0.59rem;
+        color: var(--muted);
+      }
+      .bottom-left,
+      .bottom-right {
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .bottom-right {
+        justify-content: flex-end;
+      }
+      .bottom-label,
+      .bottom-left strong {
+        color: var(--text);
+      }
+      .bottom-label {
+        color: var(--dim);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.53rem;
+      }
+      .bottom-phone {
+        color: var(--text);
+        font-size: 0.7rem;
+        font-weight: 850;
+        letter-spacing: 0.02em;
+        padding: 5px 12px;
+        border: 1px solid rgba(73, 227, 206, 0.32);
+        border-radius: 6px;
+        background: rgba(73, 227, 206, 0.06);
+      }
+      .bottom-phone:hover {
+        color: var(--teal);
+        border-color: rgba(73, 227, 206, 0.58);
+      }
 
       .proof-label {
         color: var(--dim);
@@ -497,13 +548,7 @@
       .project-label {
         margin-top: 9px;
       }
-      .education-card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 14px;
-        padding: 8px 12px;
-      }
+
       .education-main {
         min-width: 0;
         display: flex;
@@ -772,9 +817,18 @@
         .bring {
           grid-template-columns: 1fr;
         }
-        .education-card {
-          min-height: 64px;
-          padding: 9px;
+        .bottom-bar {
+          grid-template-columns: 1fr;
+          justify-items: center;
+          min-height: 72px;
+          padding: 7px;
+        }
+        .bottom-left,
+        .bottom-right {
+          justify-content: center;
+        }
+        .bottom-phone {
+          order: -1;
         }
       }
     </style>
@@ -799,7 +853,11 @@
           </div>
         </div>
         <div class="actions">
-          <a class="action primary" href="mailto:debajyoti.maity29@gmail.com"
+          <a
+            class="action primary"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=debajyoti.maity29@gmail.com"
+            target="_blank"
+            rel="noreferrer"
             >Email</a
           >
           <a class="action" href="tel:+917679101800">Call</a>
@@ -865,7 +923,7 @@
                   ><span class="chip">Ionic</span>
                   <span class="chip">TypeScript</span
                   ><span class="chip">Tailwind</span
-                  ><span class="chip">Jest</span>
+                  ><span class="chip">Bootstrap</span>
                 </div>
               </div>
               <div class="stack-box">
@@ -918,9 +976,9 @@
               platform.
             </div>
             <p class="current-desc">
-              Building a Government Healthcare Test Data Platform for UK public
-              health using Angular 18, while leading frontend development and
-              mentoring a team of 4 developers.
+              The strongest signal here is not the feature list: it is owning a
+              complex Angular product, turning difficult data workflows into
+              usable interfaces, and helping a small frontend team ship quickly.
             </p>
 
             <div class="proof-grid">
@@ -1093,16 +1151,20 @@
         </section>
       </main>
 
-      <article class="card education-card">
-        <div class="education-main">
-          <div class="card-title">Education</div>
-          <strong>B.Tech in Computer Science</strong>
-          <span>University of Engineering and Management · 2016–2020</span>
+      <footer class="bottom-bar">
+        <div class="bottom-left">
+          <span class="bottom-label">Education</span>
+          <span
+            ><strong>B.Tech Computer Science</strong> · University of
+            Engineering and Management · 2016–2020</span
+          >
         </div>
-        <div class="education-note">
-          <span class="dot"></span> Open to frontend-heavy full-stack work
+        <a class="bottom-phone" href="tel:+917679101800">+91 76791 01800</a>
+        <div class="bottom-right">
+          <span class="dot"></span>
+          <span>Open to frontend-heavy full-stack work</span>
         </div>
-      </article>
+      </footer>
     </div>
   </body>
 </html>
